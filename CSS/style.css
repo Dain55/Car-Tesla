@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Rubik&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: 'Rubik', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    height: 100vh;
+    width: 1320px;
+}
+
+.wheels{
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    z-index: 2;
+}
+.wheels img{
+  width: 100px;
+  height: 100px;
+  animation: wheels .5s linear infinite ;
+}
+.img-wheel1{
+    position: relative;
+    left: 350px;
+    bottom: 250px;
+}
+.img-wheel2{
+    position: relative;
+    left: 750px;
+    bottom: 250px;
+}
+
+
+@keyframes wheels{
+    100%{
+    transform: rotate(360deg);
+    }
+}
+.speedometer{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.scena{
+    padding-left: 100px;
+}
+.grey-text-h4{
+    color: grey;
+    padding-bottom: 10px;
+}
+.h1-font{
+    font-size: 50px;
+    font-weight: bold;
+}
+.box-car-statick{
+    display: flex;
+    margin: 50px 0px;
+    gap: 100px;
+}
+input[type='checkbox']{
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    outline: none;
+    background: #8E9AA7;
+    border-radius: 20px;
+    transition: .5s ease;  
+    cursor: pointer;
+}
+input:checked[type='checkbox']{
+   background: #004DFF;
+
+}
+input[type='checkbox']:before{
+   content: '';
+   position: absolute;
+   width: 30px;
+   height: 30px;
+   margin: 5px;
+   border-radius: 20px;
+   background: rgb(255, 255, 255);
+   transition: .5s ease;
+   transform: scale(1.1);
+}
+input:checked[type='checkbox']::before{
+margin-left: 45px;
+}
